@@ -1,0 +1,11 @@
+{
+  "name": "login-form",
+  "version": "1.0.0",
+  "description": "Login Form",
+  "main": "app.js",
+  "scripts": {
+    "test": "["
+  },
+  "author": "Mohammad Safar",
+  "license": "ISC"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "hello-word",
+  "version": "1.0.0",
+  "description": "Hello Word ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mammadsafar/Mohammad_Safarzadeh_hw12_maktab45.git"
+  },
+  "author": "Mohammad safar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mammadsafar/Mohammad_Safarzadeh_hw12_maktab45/issues"
+  },
+  "homepage": "https://github.com/Mammadsafar/Mohammad_Safarzadeh_hw12_maktab45#readme"
+}
