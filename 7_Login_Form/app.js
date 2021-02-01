@@ -1,10 +1,12 @@
 const http = require('http');
 const fs = require('fs');
+const local_module = require("./tools/check_pass");
 
 http.createServer(function (request, response) {
     // root , get
+
     if (request.url === "/" && request.method === "GET") {
-        
+
         fs.readFile('./public/index.html', 'utf8', (err, page) => {
             if (err) {
                 response.write(err);
@@ -16,18 +18,16 @@ http.createServer(function (request, response) {
 
 
     } else if (request.url === "/photo.jpg" && request.method === "GET") {
-        console.log(1234);
-        fs.readFile('photo.jpg', (err, img) => {
+        fs.readFile('public/photo.jpg', (err, img) => {
             if (err) {
                 response.write(err);
                 response.end();
             }
-            console.log(45678);
-        response.write(img);
-        response.end();
+            response.write(img);
+            response.end();
         })
-    }else if (request.url === "/loginForm.css" && request.method === "GET") {
-        
+    } else if (request.url === "/loginForm.css" && request.method === "GET") {
+
         fs.readFile('./public/loginForm.css', 'utf8', (err, page) => {
             if (err) {
                 response.write(err);
@@ -37,7 +37,7 @@ http.createServer(function (request, response) {
             response.end();
         })
     } else if (request.url === "/style.css" && request.method === "GET") {
-        
+
         fs.readFile('./public/style.css', 'utf8', (err, page) => {
             if (err) {
                 response.write(err);
@@ -46,9 +46,9 @@ http.createServer(function (request, response) {
             response.write(page);
             response.end();
         })
-    } else if (request.url === "/fontiran.css" && request.method === "GET") {
-        
-        fs.readFile('./public/fontiran.css', 'utf8', (err, page) => {
+    } else if (request.url === "/js/main.js" && request.method === "GET") {
+
+        fs.readFile('./public/js/main.js', 'utf8', (err, page) => {
             if (err) {
                 response.write(err);
                 response.end();
@@ -56,16 +56,30 @@ http.createServer(function (request, response) {
             response.write(page);
             response.end();
         })
+        //! ---------------------------------> POST METHOD <----------
+    } else if (request.url === "/getJason"  && request.method === "POST") {
+
+        request.on('data', function (data) {
+            console.log(local_module(data));
+            if(local_module(data)){
+
+                response.end("true");
+            }else{
+
+                response.end("false");
+            }
+
+        });
+
     } else {
-        response.write("Bad Request");
+
+        response.write("Bad Request 435");
         response.end();
     }
 
 
 
 
-
-    // console.log(request);
 }).listen(5005);
 
 console.log("server started on port 5005 !!");

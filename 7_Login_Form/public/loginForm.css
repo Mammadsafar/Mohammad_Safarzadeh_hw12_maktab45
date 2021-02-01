@@ -3,10 +3,8 @@
 	font-style: normal;
 	font-weight: 900;
 	src: url('../fonts/eot/IRANSansWeb_Black.eot');
-	src: url('../fonts/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('../fonts/woff2/IRANSansWeb_Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('../fonts/woff/IRANSansWeb_Black.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-         url('../fonts/ttf/IRANSansWeb_Black.ttf') format('truetype');
+	src: url('../fonts/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype');  /* IE6-8 */
+
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -29,9 +27,8 @@ body {
 
     background-color:rgba(0, 0, 0,0.7);
     padding:50px;
-    width: 300px;
-    /* opacity: .7; */
-    height: 300px;
+    width: 350px;
+    height: 370px;
     border-radius:3px;
 
 }
@@ -47,7 +44,7 @@ h2{
     /* display: -ms-flexbox; */
     display: flex;
     width: 100%;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     border-radius:3%;
     font-size: 20px;
     border: 1px solid rgb(255, 255, 255);
@@ -74,6 +71,22 @@ h2{
 
 .input-field:focus {
     border: 2px solid #6b757e;
+}
+
+
+.spanX{
+    background-color: #fff;
+    padding : 10px;
+    font-weight: bold;
+
+}
+
+.userSpan{
+    color: red;
+
+}
+.passSpan{
+    color: red;
 }
 
 .btn {
